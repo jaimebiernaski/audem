@@ -30,7 +30,7 @@ describe('Login Screen', () => {
   });
 
   test('render title', () => {
-    expect(queryByText('Login Screen')).toBeTruthy();
+    expect(queryByTestId('title').props.children).toBeTruthy();
   });
 
   test('render login button', () => {
@@ -40,5 +40,9 @@ describe('Login Screen', () => {
   test('on login button press, navigate to onboarding', () => {
     fireEvent.press(getByTestId('login-button'));
     expect(mockProps.navigation.navigate).toHaveBeenCalledWith('Onboarding');
+  });
+
+  test('render lang select', () => {
+    expect(getByTestId('lang-selector')).toBeTruthy();
   });
 });

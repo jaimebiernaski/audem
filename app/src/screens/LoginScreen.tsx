@@ -4,20 +4,30 @@
 
 import React from 'react';
 import { View, Text, Button } from 'react-native';
+
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../../App';
+import { useTranslation } from 'react-i18next';
+
+import { LanguageSelector } from '../components/LanguageSelector';
+import { button, typo } from '../styles';
 
 /**
- * The type for the navigation prop takes 2 generics, the param list
- * and the name of the current route.
+ * Type checking the navigator: object type with mappings for route
+ * name to the params of the route.
  *
- * ref: https://reactnavigation.org/docs/typescript/
+ * @type LoginScreenNavigationProp
+ * @see https://reactnavigation.org/docs/typescript/
  */
+
 type LoginScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
   'Login'
 >;
 
+/**
+ * Component props
+ */
 interface LoginProps {
   navigation: LoginScreenNavigationProp;
 }
@@ -27,20 +37,21 @@ interface LoginProps {
  *  which takes 1 generic (Type defined by parameter)
  *  in this case the generic is the props "LoginProps".
  *
- *  The navigation props is of type LoginProps
- *
- *  The component returns an element type JSX.Element.
+ *  @param navigation of type LoginProps
+ *  @returns an element type JSX.Element.
  *  */
 
 export const LoginScreen: React.FC<LoginProps> = ({
   navigation
 }: LoginProps): JSX.Element => {
+  const { t, i18n } = useTranslation();
+
   return (
     <View testID='login-screen'>
       <Text testID='title'>Login Screen</Text>
       <Button
         testID='login-button'
-        title='Login'
+        title={t('login')}
         /**
          * Using the navigation prop to navigate between screens
          */
@@ -48,6 +59,7 @@ export const LoginScreen: React.FC<LoginProps> = ({
           navigation.navigate('Onboarding');
         }}
       />
+      <LanguageSelector />
     </View>
   );
 };
