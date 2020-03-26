@@ -3,10 +3,12 @@
  */
 
 import React from 'react';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { LoginScreen } from './src/screens/LoginScreen';
 import { OnboardingScreen } from './src/screens/OnboardingScreen';
+import './src/i18n'; // i18n (needs to be bundled ;))
 
 /**
  *  Object type with mappings for route name to the params of the route
