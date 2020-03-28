@@ -8,6 +8,7 @@ import { render, fireEvent } from 'react-native-testing-library';
 import { LanguageSelector } from './LanguageSelector';
 import { languages } from '../i18n';
 import { setLang, currentLang } from '../utils/languageUtils';
+import { FontWeight } from '../styles';
 
 jest.mock('../utils/languageUtils', () => ({
   setLang: jest.fn(),
@@ -26,9 +27,9 @@ describe('Language Selector', () => {
   });
   test.each(languages)('selector style %o', (key, expected) => {
     const element = queryByTestId(key);
-    key === 'BRX' //currentLang()
-      ? expect(element.props.style.fontWeight).toBe('bold')
-      : expect(element.props.style.fontWeight).toBe('normal');
+    key === currentLang()
+      ? expect(element.props.style[1].fontWeight).toBe(FontWeight.Bold)
+      : expect(element.props.style[1].fontWeight).toBe(FontWeight.Regular);
   });
 
   test('change language', () => {
