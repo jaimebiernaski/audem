@@ -3,14 +3,16 @@
  */
 
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, Image } from 'react-native';
 
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../App';
+import { Button } from 'react-native-elements';
 import { useTranslation } from 'react-i18next';
 
+import { RootStackParamList } from '../../App';
 import { LanguageSelector } from '../components/LanguageSelector';
-import { button, typo } from '../styles';
+import { Logo } from '../components/Logo';
+import { buttons, styles, typo, Colors } from '../styles';
 
 /**
  * Type checking the navigator: object type with mappings for route
@@ -47,19 +49,41 @@ export const LoginScreen: React.FC<LoginProps> = ({
   const { t, i18n } = useTranslation();
 
   return (
-    <View testID='login-screen'>
-      <Text testID='title'>Login Screen</Text>
-      <Button
-        testID='login-button'
-        title={t('login')}
-        /**
-         * Using the navigation prop to navigate between screens
-         */
-        onPress={() => {
-          navigation.navigate('Onboarding');
-        }}
-      />
+    <SafeAreaView testID='login-screen' style={styles.container}>
+      <View style={[styles.container, localStyle.container]}>
+        <Logo />
+        <Text
+          testID='login-message'
+          style={[localStyle.message, typo.titleThree]}
+        >
+          {t('messageReadOnce')}
+        </Text>
+
+        <Button
+          testID='login-button'
+          title={t('login')}
+          style={buttons.regular}
+          buttonStyle={{ backgroundColor: Colors.Blue }}
+          /**
+           * Using the navigation prop to navigate between screens
+           */
+          onPress={() => {
+            navigation.navigate('Onboarding');
+          }}
+        />
+      </View>
       <LanguageSelector />
-    </View>
+    </SafeAreaView>
   );
 };
+
+const localStyle = StyleSheet.create({
+  container: {
+    justifyContent: 'space-around'
+  },
+  message: {
+    width: 250,
+    textAlign: 'center',
+    alignSelf: 'center'
+  }
+});
