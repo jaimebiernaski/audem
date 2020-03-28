@@ -7,6 +7,7 @@ export default {
   translation: {
     welcome: 'Welcome',
     login: 'Login',
-    next: 'Next'
+    next: 'Next',
+    messageReadOnce: 'Messages that should be read just once'
   }
 };
