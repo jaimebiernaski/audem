@@ -44,6 +44,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    paddingVertical: Padding.medium
+    paddingVertical: Padding.Medium
   }
 });

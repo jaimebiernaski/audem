@@ -14,11 +14,11 @@ export enum Colors {
 }
 
 export enum Padding {
-  tiny = 5,
-  small = 10,
-  medium = 20,
-  lange = 30,
-  extraLarge = 40
+  Tiny = 5,
+  Small = 10,
+  Medium = 20,
+  Lange = 30,
+  ExtraLarge = 40
 }
 
 const fontFamily = 'Arial';
