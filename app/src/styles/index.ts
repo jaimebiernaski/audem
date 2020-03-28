@@ -9,8 +9,10 @@ export enum Colors {
   Primary = '#DB0D02',
   Secondary = '#F2830A',
   Tertiary = '#FFE014',
-  TextDark = '#303030',
-  TextLight = '#808080'
+  Dark = '#303030',
+  Grey = '#808080',
+  White = '#FFF',
+  Blue = '#187EDB'
 }
 
 export enum Padding {
@@ -37,7 +39,8 @@ export enum FontWeight {
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: Colors.White
   },
   center: {
     alignContent: 'center',
@@ -50,72 +53,79 @@ export const typo = StyleSheet.create({
     fontFamily,
     fontSize: 34,
     fontWeight: FontWeight.Bold,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
-  title_1: {
+  titleOne: {
     fontFamily,
     fontSize: 28,
     fontWeight: FontWeight.Regular,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
-  title_2: {
+  titleTwo: {
     fontFamily,
     fontSize: 22,
     fontWeight: FontWeight.Regular,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
-  title_3: {
+  titleThree: {
     fontFamily,
     fontSize: 20,
     fontWeight: FontWeight.Regular,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
   headline: {
     fontFamily,
     fontSize: 17,
     fontWeight: FontWeight.Semibold,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
   body: {
     fontFamily,
     fontSize: 17,
     fontWeight: FontWeight.Regular,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
   callout: {
     fontFamily,
     fontSize: 16,
     fontWeight: FontWeight.Regular,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
   subhead: {
     fontFamily,
     fontSize: 15,
     fontWeight: FontWeight.Regular,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
   footnote: {
     fontFamily,
     fontSize: 13,
     fontWeight: FontWeight.Regular,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
-  caption_1: {
+  captionOne: {
     fontFamily,
     fontSize: 12,
     fontWeight: FontWeight.Regular,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
-  caption_2: {
+  captionTwo: {
     fontFamily,
     fontSize: 11,
     fontWeight: FontWeight.Regular,
-    color: Colors.TextDark
+    color: Colors.Dark
   },
-  caption_3: {
+  captionThree: {
     fontFamily,
     fontSize: 10,
     fontWeight: FontWeight.Regular,
-    color: Colors.TextDark
+    color: Colors.Dark
+  }
+});
+
+export const buttons = StyleSheet.create({
+  regular: {
+    width: 200,
+    alignSelf: 'center'
   }
 });
