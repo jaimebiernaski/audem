@@ -11,14 +11,14 @@ import { FontWeight, Padding, typo } from '../styles';
 
 export const LanguageSelector: React.FC = (): JSX.Element => {
   return (
-    <View testID='lang-selector' style={localStyles.container}>
+    <View testID='lang-selector' style={customStyles.container}>
       {languages.map(lang => {
         return (
           <TouchableOpacity
             testID={`change-lang-to-${lang[0]}`}
             key={lang[0]}
             onPress={() => setLang(lang[0])}
-            style={localStyles.touch}
+            style={customStyles.touch}
           >
             <Text
               testID={lang[0]}
@@ -41,7 +41,7 @@ export const LanguageSelector: React.FC = (): JSX.Element => {
   );
 };
 
-const localStyles = StyleSheet.create({
+const customStyles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-around',
