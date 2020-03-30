@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { View, Text, SafeAreaView, StyleSheet, Image } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
 
 import { StackNavigationProp } from '@react-navigation/stack';
 import { Button } from 'react-native-elements';
@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 import { RootStackParamList } from '../../App';
 import { LanguageSelector } from '../components/LanguageSelector';
 import { Logo } from '../components/Logo';
-import { buttons, styles, typo, Colors } from '../styles';
+import { buttons, styles, typo } from '../styles';
 
 /**
  * Type checking the navigator: object type with mappings for route
@@ -62,8 +62,7 @@ export const LoginScreen: React.FC<LoginProps> = ({
         <Button
           testID='login-button'
           title={t('login')}
-          style={buttons.regular}
-          buttonStyle={{ backgroundColor: Colors.Blue }}
+          buttonStyle={buttons.regular}
           /**
            * Using the navigation prop to navigate between screens
            */

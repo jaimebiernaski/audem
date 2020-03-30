@@ -126,6 +126,7 @@ export const typo = StyleSheet.create({
 export const buttons = StyleSheet.create({
   regular: {
     width: 200,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    backgroundColor: Colors.Blue
   }
 });
