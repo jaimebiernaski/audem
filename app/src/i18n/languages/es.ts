@@ -8,6 +8,6 @@ export default {
     welcome: 'Bienvenido',
     login: 'Iniciar sesión',
     next: 'Próximo',
-    messageReadOnce: 'Los mensajes que deben leerse sólo una vez'
+    messageReadOnce: 'Los mensajes que deben leerse sólo una vez.'
   }
 };
