@@ -1,3 +1,7 @@
+/**
+ * Logo.test.tsx
+ */
+
 import React from 'react';
 import { Logo } from './Logo';
 import { render } from 'react-native-testing-library';
