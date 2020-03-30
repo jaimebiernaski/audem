@@ -50,7 +50,7 @@ export const LoginScreen: React.FC<LoginProps> = ({
 
   return (
     <SafeAreaView testID='login-screen' style={styles.container}>
-      <View style={[styles.container, customStyles.container]}>
+      <View style={customStyles.content}>
         <Logo />
         <Text
           testID='login-message'
@@ -77,7 +77,8 @@ export const LoginScreen: React.FC<LoginProps> = ({
 };
 
 const customStyles = StyleSheet.create({
-  container: {
+  content: {
+    flex: 1,
     justifyContent: 'space-around'
   },
   message: {
