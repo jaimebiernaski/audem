@@ -29,10 +29,6 @@ describe('Login Screen', () => {
     expect(queryByTestId('login-screen')).toBeTruthy();
   });
 
-  test('render title', () => {
-    expect(queryByTestId('title').props.children).toBeTruthy();
-  });
-
   test('render login button', () => {
     expect(queryByTestId('login-button')).toBeTruthy();
   });
@@ -44,5 +40,9 @@ describe('Login Screen', () => {
 
   test('render lang select', () => {
     expect(getByTestId('lang-selector')).toBeTruthy();
+  });
+
+  test('render message', () => {
+    expect(getByTestId('login-message').props.children).toBeTruthy();
   });
 });

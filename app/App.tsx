@@ -33,7 +33,11 @@ const App: React.FC = (): JSX.Element => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Login'>
-        <Stack.Screen name='Login' component={LoginScreen} />
+        <Stack.Screen
+          name='Login'
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name='Onboarding' component={OnboardingScreen} />
       </Stack.Navigator>
     </NavigationContainer>
