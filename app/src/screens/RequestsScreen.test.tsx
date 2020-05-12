@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'react-native-testing-library';
-import { NicknameScreen } from './NicknameScreen';
+import { RequestsScreen } from './RequestsScreen';
 
-describe('Nickname Screen', () => {
-  const { queryByText } = render(<NicknameScreen />);
-  test('render Nickname Screen', () => {
-    expect(queryByText('Nickname Screen')).toBeTruthy();
+describe('Requests Screen', () => {
+  const { queryByText } = render(<RequestsScreen />);
+  test('render Requests Screen', () => {
+    expect(queryByText('Requests Screen')).toBeTruthy();
   });
 });
