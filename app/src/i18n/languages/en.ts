@@ -8,6 +8,8 @@ export default {
     welcome: 'Welcome',
     login: 'Login',
     next: 'Next',
-    messageReadOnce: 'Messages that should be read just once.'
-  }
+    messageReadOnce: 'Messages that should be read just once.',
+    finish: 'Finish',
+    logout: 'Logout',
+  },
 };

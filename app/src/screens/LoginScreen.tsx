@@ -18,20 +18,17 @@ import { buttons, styles, typo } from '../styles';
  * Type checking the navigator: object type with mappings for route
  * name to the params of the route.
  *
- * @type LoginScreenNavigationProp
+ * @type LoginScreenNavProp
  * @see https://reactnavigation.org/docs/typescript/
  */
 
-type LoginScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'Login'
->;
+type LoginScreenNavProp = StackNavigationProp<RootStackParamList, 'Login'>;
 
 /**
  * Component props
  */
 interface LoginProps {
-  navigation: LoginScreenNavigationProp;
+  navigation: LoginScreenNavProp;
 }
 
 /**
@@ -44,7 +41,7 @@ interface LoginProps {
  *  */
 
 export const LoginScreen: React.FC<LoginProps> = ({
-  navigation
+  navigation,
 }: LoginProps): JSX.Element => {
   const { t, i18n } = useTranslation();
 
@@ -63,6 +60,7 @@ export const LoginScreen: React.FC<LoginProps> = ({
           testID='login-button'
           title={t('login')}
           buttonStyle={buttons.regular}
+          containerStyle={buttons.container}
           /**
            * Using the navigation prop to navigate between screens
            */
@@ -79,11 +77,11 @@ export const LoginScreen: React.FC<LoginProps> = ({
 const customStyles = StyleSheet.create({
   content: {
     flex: 1,
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   message: {
     width: 250,
     textAlign: 'center',
-    alignSelf: 'center'
-  }
+    alignSelf: 'center',
+  },
 });

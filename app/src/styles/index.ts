@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions, TextStyle } from 'react-native';
 
 export const dimensions = {
   fullHeight: Dimensions.get('window').height,
-  fullWidth: Dimensions.get('window').width
+  fullWidth: Dimensions.get('window').width,
 };
 
 export enum Colors {
@@ -12,7 +12,7 @@ export enum Colors {
   Dark = '#303030',
   Grey = '#808080',
   White = '#FFF',
-  Blue = '#187EDB'
+  Blue = '#187EDB',
 }
 
 export enum Padding {
@@ -20,7 +20,7 @@ export enum Padding {
   Small = 10,
   Medium = 20,
   Lange = 30,
-  ExtraLarge = 40
+  ExtraLarge = 40,
 }
 
 const fontFamily = 'Arial';
@@ -34,18 +34,18 @@ export enum FontWeight {
   Semibold = '600',
   Bold = '700',
   Heavy = '800',
-  Black = '900'
+  Black = '900',
 }
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.White
+    backgroundColor: Colors.White,
   },
   center: {
     alignContent: 'center',
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 });
 
 export const typo = StyleSheet.create({
@@ -53,80 +53,84 @@ export const typo = StyleSheet.create({
     fontFamily,
     fontSize: 34,
     fontWeight: FontWeight.Bold,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   titleOne: {
     fontFamily,
     fontSize: 28,
     fontWeight: FontWeight.Regular,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   titleTwo: {
     fontFamily,
     fontSize: 22,
     fontWeight: FontWeight.Regular,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   titleThree: {
     fontFamily,
     fontSize: 20,
     fontWeight: FontWeight.Regular,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   headline: {
     fontFamily,
     fontSize: 17,
     fontWeight: FontWeight.Semibold,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   body: {
     fontFamily,
     fontSize: 17,
     fontWeight: FontWeight.Regular,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   callout: {
     fontFamily,
     fontSize: 16,
     fontWeight: FontWeight.Regular,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   subhead: {
     fontFamily,
     fontSize: 15,
     fontWeight: FontWeight.Regular,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   footnote: {
     fontFamily,
     fontSize: 13,
     fontWeight: FontWeight.Regular,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   captionOne: {
     fontFamily,
     fontSize: 12,
     fontWeight: FontWeight.Regular,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   captionTwo: {
     fontFamily,
     fontSize: 11,
     fontWeight: FontWeight.Regular,
-    color: Colors.Dark
+    color: Colors.Dark,
   },
   captionThree: {
     fontFamily,
     fontSize: 10,
     fontWeight: FontWeight.Regular,
-    color: Colors.Dark
-  }
+    color: Colors.Dark,
+  },
 });
 
 export const buttons = StyleSheet.create({
   regular: {
     width: 200,
     alignSelf: 'center',
-    backgroundColor: Colors.Blue
-  }
+    backgroundColor: Colors.Blue,
+  },
+  container: {
+    width: 200,
+    alignSelf: 'center',
+  },
 });
